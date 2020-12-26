@@ -332,6 +332,63 @@
 		width: 25vw;
 	}
 
+	.heart {
+	    position: absolute;
+	    margin: auto;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    background-color: pink;
+	    height: 50px;
+	    width: 50px;
+	    transform: rotate(-45deg);
+	  }
+	  .heart::after {
+	    background-color: pink;
+	    content: "";
+	    border-radius: 50%;
+	    position: absolute;
+	    width: 50px;
+	    height: 50px;
+	    top: 0px;
+	    left: 25px;
+	  }
+	  .heart::before {
+	    content: "";
+	    background-color: pink;
+	    border-radius: 50%;
+	    position: absolute;
+	    width: 50px;
+	    height: 50px;
+	    top: -25px;
+	    left: 0px;
+	  }
+
+	  .small-heart {
+	  	transform: scale(0.7);
+	  }
+
+	  .movement-heart {
+	  	margin-top: -13em;
+	  	margin-left: -18em;
+	  }
+
+	  .heart-flutter {
+	  	animation-name: heart-animation;
+	  	animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-timing-function: ease-in-out;
+	  }
+
+	  @keyframes heart-animation {
+	  	0% {transform: rotate(0deg);}
+	  	33.3% {transform: rotate(-15deg);}
+	  	66.6% {transform: rotate(15deg);}
+	  	100% {transform: rotate(0deg);}
+	  }
+
 	</style>
 </head>
 <body>
@@ -381,6 +438,13 @@
 			<div class="left-up-arm"></div>
 		</div>
 		<div class="right-arm"></div>
+		<div class="movement-heart">
+			<div class="heart-flutter">
+				<div class="small-heart">
+					<div class="heart"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 	</span>
 	<script>
@@ -405,7 +469,7 @@
 		var j = "Let me be real with you for this one message, please- I honestly do not think that I am a good 'therapist' or 'directioner' for other people- I'm quite confusing and I can see that I've changed- I usually am really 'harsh' or another word to describe it. It's just that I hate lying, especially when talking about mental health. I really don't know if it's good for your health. That's why I've been taking MANY, and I really mean MANY, lyrics from smarter people like Takayan. He's a life saver to me, he is easy to relate to for mental health, etc- plus he cinnamon roll :3. HE REACHED 1 MILL TOO :D. To my dearest, I love you so much. You are family to me.";
 
 		var k = "Self-indulgent pikachu --> He's here to be with you at your lowest. He will never leave your side- if not he's getting a beating. If anything bad happens, you know what to do. Call (okok pls text my parents hate calls) me and tell me if he's been a gud boi.";
-		
+
 		var l = "beby";
 
 		var arr = [a, b, c, d, e, f, g, h, i, j, k, l];
